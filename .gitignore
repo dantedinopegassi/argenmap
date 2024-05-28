@@ -1,4 +1,5 @@
 src/config
 !src/config/default/*
+src/config/default/data.json
 .vscode
 .hintrc
