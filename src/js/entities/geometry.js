@@ -1,4 +1,5 @@
 class Geometry {
+  
   constructor() {
     this._types = [
       "Geometry",
