@@ -3,13 +3,13 @@
 // import config from "./__config__";
 import View from "./view";
 import Model from "./model";
-import { FullscreenPlugin } from "./plugins";
+// import { FullscreenPlugin } from "./plugins";
 
 const Controller = {
-    init(): void {
-        this.loadMap();
-        this.loadPlugins();
-    },
+    // init(): void {
+    //     this.loadMap();
+    //     this.loadPlugins();
+    // },
 
     // loadMap(): void {
     //     const { lat, lng, zoom } = config.initialMap;
