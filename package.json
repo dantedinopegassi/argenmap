@@ -4,17 +4,21 @@
   "description": "<img width=\"256\" src=\"src/styles/images/argenmap-banner.png\" alt=\"Argenmap\" />",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode production",
+    "dev": "webpack --mode development"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "dependencies": {
+    "typescript": "^5.5.2"
+  },
   "devDependencies": {
     "@types/leaflet": "^1.9.12",
     "css-loader": "^7.1.2",
     "style-loader": "^4.0.0",
     "ts-loader": "^9.5.1",
-    "typescript": "^5.5.2",
     "webpack": "^5.92.1",
     "webpack-cli": "^5.1.4"
   }

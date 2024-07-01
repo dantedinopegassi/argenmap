@@ -1,5 +1,5 @@
 import { Map } from "leaflet";
 
-export function addLayer(map: Map) {
+export function addPlugin(map: Map) {
     throw Error;
 }
