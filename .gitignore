@@ -133,3 +133,6 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# patch something weird with .nuxt dist rule excluding this folder
+!srcTSS/js/map/plugins/leaflet/leaflet-zoomhome/dist
