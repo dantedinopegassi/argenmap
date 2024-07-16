@@ -1,5 +1,3 @@
-import { marked } from "marked";
-
 /**
  * Represents a utility class to get data from various sources.
  */
