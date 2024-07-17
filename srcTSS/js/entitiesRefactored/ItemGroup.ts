@@ -131,7 +131,7 @@ class ItemComposite {
     }
   
     getId() {
-      return ItemGroupPrefix + this.seccion;
+      return "lista-" + this.seccion;
     }
   
     getTab() {

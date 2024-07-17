@@ -25,7 +25,7 @@ class Tab {
     }
   
     getExtendedId() {
-      return EmptyTab + this.id;
+      return "main-menu-tab-" + this.id;
     }
   
     getContent() {

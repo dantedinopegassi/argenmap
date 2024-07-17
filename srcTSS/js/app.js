@@ -430,19 +430,20 @@ let getGeoserverCounter = 0,
   templateFeatureInfoFieldException = [],
   gestorMenu = new GestorMenu();
 
-$.getJSON("./src/config/data.json", async function (data) {
-  $.getJSON("./src/config/preferences.json", async function (preferences) {
-    gestorMenu.setLegendImgPath("src/config/styles/images/legends/");
-    await loadTemplate({ ...data, ...preferences }, false);
-  }).fail(async function (jqxhr, textStatus, error) {
-    console.warn("Template not found. Default configuration will be loaded.");
-    await loadDefaultJson();
-  });
-}).fail(async function (jqxhr, textStatus, error) {
-  console.warn("Template not found. Default configuration will be loaded.");
-  await loadDefaultJson();
-});
+// $.getJSON("./src/config/data.json", async function (data) {
+//   $.getJSON("./src/config/preferences.json", async function (preferences) {
+//     gestorMenu.setLegendImgPath("src/config/styles/images/legends/");
+//     await loadTemplate({ ...data, ...preferences }, false);
+//   }).fail(async function (jqxhr, textStatus, error) {
+//     console.warn("Template not found. Default configuration will be loaded.");
+//     await loadDefaultJson();
+//   });
+//   }).fail(async function (jqxhr, textStatus, error) {
+//   console.warn("Template not found. Default configuration will be loaded.");
+//   await loadDefaultJson();
+// });
 
+loadConfiguration(gestorMenu);
 async function loadDefaultJson() {
   $.getJSON("./src/config/default/data.json", async function (data) {
     $.getJSON(

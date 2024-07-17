@@ -101,7 +101,7 @@ class LayersInfo {
         ) {
           const impresorItem = new ImpresorItemHTML();
           var itemGroup = _gestorMenu.getItemGroupById(
-            ItemGroupPrefix + this.section
+            "lista-" + this.section
           );
           if (itemGroup != null) {
             for (var key in this.customizedLayers) {
@@ -173,10 +173,10 @@ class LayersInfo {
             }
           }
           _gestorMenu.removeLazyInitLayerInfoCounter(
-            ItemGroupPrefix + this.section
+            "lista-" + this.section
           );
           if (
-            _gestorMenu.finishLazyInitLayerInfo(ItemGroupPrefix + this.section)
+            _gestorMenu.finishLazyInitLayerInfo("lista-" + this.section)
           ) {
             //Si ya cargó todas las capas solicitadas
             _gestorMenu.printOnlySection(this.section);
@@ -313,8 +313,8 @@ class LayersInfo {
   
           // Handle menu printing based on initialization mode
           if (_gestorMenu.getLazyInitialization() === true) {
-            _gestorMenu.removeLazyInitLayerInfoCounter(ItemGroupPrefix + thisObj.section);
-            if (_gestorMenu.finishLazyInitLayerInfo(ItemGroupPrefix + thisObj.section)) {
+            _gestorMenu.removeLazyInitLayerInfoCounter("lista-" + thisObj.section);
+            if (_gestorMenu.finishLazyInitLayerInfo("lista-" + thisObj.section)) {
               // If all requested layers have been loaded
               _gestorMenu.printOnlySection(thisObj.section);
               gestorMenu.allLayersAreLoaded = true;
@@ -511,11 +511,11 @@ class LayersInfo {
   
           if (_gestorMenu.getLazyInitialization() == true) {
             _gestorMenu.removeLazyInitLayerInfoCounter(
-              ItemGroupPrefix + thisObj.section
+              "lista-" + thisObj.section
             );
             if (
               _gestorMenu.finishLazyInitLayerInfo(
-                ItemGroupPrefix + thisObj.section
+                "lista-" + thisObj.section
               )
             ) {
               //Si ya cargó todas las capas solicitadas
@@ -608,7 +608,7 @@ class LayersInfo {
         ) {
           const impresorItem = new ImpresorItemHTML();
           var itemGroup = _gestorMenu.getItemGroupById(
-            ItemGroupPrefix + this.section
+            "lista-" + this.section
           );
           if (itemGroup != null) {
             for (var key in this.customizedLayers) {
@@ -682,10 +682,10 @@ class LayersInfo {
             }
           }
           _gestorMenu.removeLazyInitLayerInfoCounter(
-            ItemGroupPrefix + this.section
+            "lista-" + this.section
           );
           if (
-            _gestorMenu.finishLazyInitLayerInfo(ItemGroupPrefix + this.section)
+            _gestorMenu.finishLazyInitLayerInfo("lista-" + this.section)
           ) {
             //Si ya cargó todas las capas solicitadas
             _gestorMenu.printOnlySection(this.section);
@@ -863,11 +863,11 @@ class LayersInfo {
   
           if (_gestorMenu.getLazyInitialization() == true) {
             _gestorMenu.removeLazyInitLayerInfoCounter(
-              ItemGroupPrefix + thisObj.section
+              "lista-" + thisObj.section
             );
             if (
               _gestorMenu.finishLazyInitLayerInfo(
-                ItemGroupPrefix + thisObj.section
+                "lista-" + thisObj.section
               )
             ) {
               //Si ya cargó todas las capas solicitadas

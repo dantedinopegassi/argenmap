@@ -390,7 +390,7 @@ class GestorMenu {
     }
   
     addTab(tab) {
-      if (tab.getExtendedId() != EmptyTab) this._tabs[tab.getId()] = tab;
+      if (tab.getExtendedId() != "main-menu-tab-") this._tabs[tab.getId()] = tab;
     }
   
     setSelectedTab(tabId) {
@@ -546,7 +546,7 @@ class GestorMenu {
     }
   
     _formatTabName(tab) {
-      return tab.replace(EmptyTab, "");
+      return tab.replace("main-menu-tab-", "");
     }
   
     processLayersJoin() {
@@ -678,7 +678,7 @@ class GestorMenu {
       //Set items html printing for all tabs
       for (var key in itemsAux) {
         var itemComposite = itemsAux[key];
-        if (itemComposite.getTab().getExtendedId() != EmptyTab) {
+        if (itemComposite.getTab().getExtendedId() != "main-menu-tab-") {
           itemComposite
             .getTab()
             .setSearchQuery(
@@ -932,7 +932,7 @@ class GestorMenu {
       for (var key in this.layersInfo) {
         if (this.layersInfo[key].tab.listType != "combobox") {
           this.addLazyInitLayerInfoCounter(
-            ItemGroupPrefix + this.layersInfo[key].section
+            "lista-" + this.layersInfo[key].section
           );
           this.layersInfo[key].get(this);
         }
@@ -1162,7 +1162,7 @@ class GestorMenu {
       let tempMenu = document.getElementById("temp-menu");
       tempMenu ? tempMenu.remove() : 0
   
-      var itemSeccionAux = itemSeccion.replace(ItemGroupPrefix, "");
+      var itemSeccionAux = itemSeccion.replace("lista-", "");
       for (var key in this.layersInfo) {
         if (this.layersInfo[key].section == itemSeccionAux) {
           this.addLazyInitLayerInfoCounter(itemSeccion);
